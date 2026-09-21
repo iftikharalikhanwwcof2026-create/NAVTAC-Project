@@ -1,0 +1,653 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: white;
+
+    color: #222;
+}
+
+
+/* =========================
+   OFFER BAR
+========================= */
+
+.offer-bar {
+
+    height: 70px;
+
+    background: #f87500;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 0 20px;
+}
+
+
+/* TIMER */
+
+.timer {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.timer span {
+
+    background: rgba(255,255,255,0.15);
+
+    padding: 10px 12px;
+
+    border-radius: 9px;
+
+    min-width: 40px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+.timer b {
+
+    font-size: 18px;
+}
+
+
+/* GIFT */
+
+.gift {
+
+    font-size: 23px;
+}
+
+
+/* LIMITED OFFER */
+
+.limited {
+
+    font-weight: bold;
+}
+
+
+/* DISCOUNT */
+
+.discount {
+
+    background: white;
+
+    color: #111;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+
+/* OFFER TEXT */
+
+.offer-text {
+
+    font-weight: bold;
+
+    font-size: 16px;
+}
+
+
+/* OFFER BUTTON */
+
+.offer-button {
+
+    border: none;
+
+    background: white;
+
+    color: #111;
+
+    padding: 14px 25px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.offer-button:hover {
+
+    background: #eeeeee;
+}
+
+
+/* CLOSE */
+
+.close-offer {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 30px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    background: white;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    min-width: 360px;
+}
+
+
+.logo-box {
+
+    width: 55px;
+
+    height: 55px;
+
+    background: #ff7100;
+
+    color: white;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    height: 100%;
+}
+
+
+.nav-links > a {
+
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 17px;
+
+    white-space: nowrap;
+}
+
+
+.nav-links > a:hover {
+
+    color: #f36c00;
+}
+
+
+
+/* =========================
+   TOOLS CONTAINER
+========================= */
+
+.tools-container {
+
+    position: relative;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+
+/* TOOLS BUTTON */
+
+.tools-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #222;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    padding: 12px 0;
+}
+
+
+.tools-button:hover {
+
+    color: #f36c00;
+}
+
+
+/* ARROW */
+
+#toolsArrow {
+
+    display: inline-block;
+
+    margin-left: 5px;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* =========================
+   TOOLS DROPDOWN
+========================= */
+
+.tools-dropdown {
+
+    position: absolute;
+
+    top: 75px;
+
+    left: -250px;
+
+    width: 620px;
+
+    height: 600px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.18);
+
+    border: 1px solid #eeeeee;
+
+    padding: 10px 14px;
+
+    overflow-y: auto;
+
+    display: none;
+
+    z-index: 9999;
+}
+
+
+/* IMPORTANT:
+   When JavaScript adds "show",
+   the dropdown becomes visible.
+*/
+
+.tools-dropdown.show {
+
+    display: block;
+}
+
+
+
+/* =========================
+   TOOL ITEM
+========================= */
+
+.tool-item {
+
+    display: block;
+
+    padding: 18px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: #222;
+
+    cursor: pointer;
+}
+
+
+.tool-item:hover {
+
+    background: #f5f5f5;
+}
+
+
+.tool-item h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 7px;
+
+    font-weight: 600;
+}
+
+
+.tool-item p {
+
+    font-size: 16px;
+
+    line-height: 1.45;
+
+    color: #666;
+}
+
+
+
+/* LAST TOOL */
+
+.last-tool {
+
+    margin-bottom: 10px;
+}
+
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.tools-dropdown::-webkit-scrollbar {
+
+    width: 12px;
+}
+
+
+.tools-dropdown::-webkit-scrollbar-track {
+
+    background: transparent;
+}
+
+
+.tools-dropdown::-webkit-scrollbar-thumb {
+
+    background: #444;
+
+    border-radius: 20px;
+}
+
+
+.tools-dropdown::-webkit-scrollbar-thumb:hover {
+
+    background: #222;
+}
+
+
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.price-badge {
+
+    background: #f06d00;
+
+    color: white;
+
+    font-size: 12px;
+
+    padding: 4px 7px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+}
+
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.right-side {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.language {
+
+    font-size: 15px;
+
+    white-space: nowrap;
+}
+
+
+.get-started {
+
+    border: none;
+
+    background: #f87500;
+
+    color: white;
+
+    padding: 17px 28px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.get-started:hover {
+
+    background: #e56200;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .logo {
+
+        min-width: 250px;
+    }
+
+    .nav-links {
+
+        gap: 20px;
+    }
+
+    .offer-text {
+
+        display: none;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .navbar {
+
+        padding: 10px 20px;
+
+        height: auto;
+
+        min-height: 90px;
+    }
+
+
+    .logo {
+
+        min-width: auto;
+    }
+
+
+    .nav-links {
+
+        gap: 15px;
+
+        overflow-x: auto;
+    }
+
+
+    .tools-dropdown {
+
+        left: -150px;
+
+        width: 500px;
+    }
+
+
+    .right-side {
+
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .offer-bar {
+
+        height: 60px;
+
+        gap: 7px;
+    }
+
+
+    .gift,
+    .limited,
+    .offer-text {
+
+        display: none;
+    }
+
+
+    .timer span {
+
+        padding: 7px;
+
+        min-width: 32px;
+    }
+
+
+    .offer-button {
+
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .navbar {
+
+        flex-wrap: wrap;
+    }
+
+
+    .nav-links {
+
+        width: 100%;
+
+        height: 50px;
+    }
+
+
+    .tools-dropdown {
+
+        left: -100px;
+
+        width: 350px;
+
+        height: 500px;
+    }
+}
